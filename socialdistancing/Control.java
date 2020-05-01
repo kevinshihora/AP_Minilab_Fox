@@ -114,7 +114,7 @@ public class Control {
 		public void paintWalls(Graphics g) {
 
 			//draws vertical walls
-	    	for(Wall wall : Wall.walls)
+	    	for(Wall wall : Wall.walls) //advanced for loop
 	    	{
 				g.drawImage(wall.getImage(), wall.getX(), wall.getY(), view);
 	    	}
