@@ -29,6 +29,9 @@ public class Building extends JPanel implements ActionListener{
 	Timer timer; //Event control	
 	int time = 0; //Track time as the simulation runs
 	
+	public Building() //needs to be defined in order for inherit to work
+	{
+	}
 	/* constructor will setup our main Graphic User Interface - a simple Frame! */
 	public Building(Control ctl, String title) {
 		// used for Control callback
@@ -76,6 +79,8 @@ public class Building extends JPanel implements ActionListener{
 		
 		//events
 		super.paintComponent(g); // a necessary call to the parent paint method, required for proper screen refreshing
+		
+		Wall.makeWalls();
 		control.paintWalls(g);
 		control.paintPersons(g); // repaint all objects in simulation
 		
